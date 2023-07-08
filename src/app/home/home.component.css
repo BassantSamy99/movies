@@ -1,0 +1,10 @@
+.vote {
+  background-color:#24baef;
+  padding: 5px;
+  font-weight: 600;
+  color: #fff !important;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}

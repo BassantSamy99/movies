@@ -1,0 +1,23 @@
+<app-header [SliderTrendingMovies]="trendingMovies"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="w-25 my-5 border border-1 border-secondary"></div>
+      <h2>Trending Movies </h2>
+      <h2>to watch Right Now</h2>
+      <p class="text-muted">Most watched Movies by days</p>
+      <div class="w-25 my-5 border border-1 border-secondary"></div>
+    </div>
+    <div *ngFor="let movie of trendingMovies" class="col-md-2 position-relative">
+      <a [routerLink]="['/moviedetails',movie.id]">
+        <div class="movie">
+          <img [src]="imgPrefix+movie.poster_path" alt="" class="w-100">
+          <h6 *ngIf="movie.title" class="my-3 text-center">{{movie.title}}</h6>
+          <div class="vote position-absolute top-0 end-0">
+            {{movie.vote_average}}
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
